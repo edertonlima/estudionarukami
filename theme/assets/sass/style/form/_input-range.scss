@@ -1,0 +1,82 @@
+$background-slider: #FDF4E5;
+$shadow-size: -6px;
+$slider-width-number: 250;
+
+@function makelongshadow($color, $size) {
+  $val: 5px 0 0 $size $color;
+  
+  @for $i from 6 through $slider-width-number {
+    $val: #{$val}, #{$i}px 0 0 $size #{$color};
+  }
+  
+  @return $val;
+}
+
+
+input[type="range"] { 
+	margin: auto;
+	-webkit-appearance: none;
+	position: relative;
+	overflow: hidden;
+	height: 22px;
+	width: 100%;
+	cursor: pointer;
+	border-radius: 25px;
+	border: 0;
+
+
+	// barra de fundo
+	&::-webkit-slider-runnable-track {
+		background: $cor-laranja;
+		border-radius: 10px;
+		height: 8px;
+		width: 100%;
+	}
+
+	&::-moz-range-track {
+		background: rgba($cor-laranja, .1);
+		border-radius: 10px;
+		height: 8px;
+		width: 100%;
+	}
+
+
+	// btn
+	&::-moz-range-thumb {
+		width: 22px;
+		height: 22px;
+		background: $cor-laranja; 
+		cursor: pointer;
+		border-radius: 50%;
+		border: 0;
+	}
+	
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 22px;
+		height: 22px;
+		background: $cor-laranja;
+		cursor: pointer;
+		border-radius: 50%;
+		border: 0;
+		position: relative;
+		top: -7px;
+
+		box-shadow: makelongshadow($background-slider, $shadow-size);
+	}	
+
+
+	// barra progresso
+	&::-webkit-progress-value { 
+		background: $cor-laranja;
+		height: 8px;
+		border-radius: 10px;
+	}
+
+	&::-moz-range-progress {
+		background: $cor-laranja;
+		height: 8px;
+		border-radius: 10px;
+	}
+}

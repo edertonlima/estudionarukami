@@ -1,0 +1,123 @@
+body * {
+
+}
+
+strong, b {
+	font-weight: $bold;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $font-destaque;
+	font-weight: $bold;
+	color: $cor2;
+
+	a {
+		font-weight: $bold;
+	}
+}
+
+h1 {
+	font-size: 28px;
+	line-height: 30px;
+
+	@include media(900){
+		font-size: 22px;
+		line-height: 25px;
+	}
+}
+
+h2 {
+	font-size: 38px;
+	line-height: 38px;
+	display: block;
+	margin-bottom: 45px;
+
+	@include media(700){ 
+		font-size: 25px;
+		line-height: 25px;
+		margin-bottom: 20px;
+	}
+
+	&.margin-min {
+		margin-bottom: 25px;
+	}
+}
+
+h3 {
+	font-size: 15px;
+	line-height: 19px;
+}
+
+h4 {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.sub-titulo {
+	color: $cor-txt;
+	font-size: 18px;
+	line-height: 20px;
+	display: block;
+
+	@include media(){ 
+		font-size: 13px;
+		line-height: 15px;
+	}
+}
+
+p {
+	display: block;
+	font-weight: $regular;
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $cor-txt;
+
+	a {
+		color: $cor1;
+		font-weight: $regular;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&.resumo {
+		color: $cor-txt;
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	&:not(:last-child){
+		margin-bottom: 15px;
+	}
+}
+
+a {
+	text-decoration: none;
+	font-weight: $regular;
+	@include animacao;
+
+	&.underline {
+		text-decoration: underline;
+	}
+
+	&.inline {
+		&:hover {
+			text-decoration: underline;
+		}	
+	}
+
+	&.btn-link {
+		font-size: 19px;
+		line-height: 24px;
+		color: $cor-txt;
+	}
+}
+
+img {
+	&.img-block{
+		display: block;
+		max-width: 100%;
+		width: 100%;
+	}
+}

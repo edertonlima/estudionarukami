@@ -1,0 +1,28 @@
+
+// cor de texto
+@each $color, $value in $colors {
+	.cor-#{$color} {
+		color: $value;
+	}
+}
+
+// cor de botao
+//@each $color, $value in $colors {
+//	.btn-bg-#{$color} {
+//		background-color: $value;
+//		border-color: $value;
+//
+//		&:hover {
+//			background-color: #ffffff;
+//			color: $value;
+//		}
+//	}
+//}
+
+
+// background-color
+@each $color, $value in $colors {
+	.bg-#{$color} {
+		background-color: $value;
+	}
+}

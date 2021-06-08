@@ -1,0 +1,56 @@
+input[type='text'], input[type='email'], input[type='password'], input[type='date'], input[type='number'] {
+
+	font-style: italic;
+	max-width: 100%;
+	width: 100%;
+	font-size: 14px;
+	color: $cor-txt;
+	font-weight: $regular;
+	line-height: $height_input;
+	background-color: transparent;
+	padding: 0px 23px;
+	font-style: normal;
+	border: 1px solid $cor-border;
+	border-radius: 4px;
+	@include animacao;
+	@include box-sizing;
+
+	@include placeholder{
+		opacity: 1;
+		color: $cor-txt;
+	}
+
+	&:focus {
+		border-color: $cor-border;
+	}
+}
+
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+
+.input-date-form {
+	position: relative;
+	margin-bottom: 0;
+
+	.input-action {
+		z-index: 1;
+		position: relative;
+		cursor: pointer;
+	}
+
+	input {
+		position: absolute;
+		top: 0;
+		opacity: 0;
+		z-index: 0;
+	}
+}

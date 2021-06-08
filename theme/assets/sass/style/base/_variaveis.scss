@@ -1,0 +1,63 @@
+$width: 1280px;
+$padding-section: 50px;
+$padding-container: 40px;
+$padding-container-mobile: 20px;
+$padding-col: 10px;
+
+$mobile-init: 900;
+
+$font-size: 15px;
+$line-height: 20px;
+
+$height_input: 44px;
+
+// FONTES
+$font-family: 'Roboto', sans-serif;
+$font-destaque: 'Poppins', sans-serif;
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 700;
+$bold: 700;
+$extra-bold: 700; 
+
+
+// texto
+$cor-txt: #777777;
+
+
+// borda
+$cor-border: mix(#4c4c4c,#fff);
+$cor-border-footer: #4c4c4c;
+
+
+// layout
+$cor1: #F2EF0D;
+$cor2: #0a0a0a;
+$cor3: #007aff;
+//$cor4: #bd0932;
+//$cor5: #e214d6;
+
+//$cor3: #CDA787;
+
+$success: #8EC044;
+$error: #FA5357;
+
+// background
+//$bg-escuro: #1E201C;
+//$bg-claro: #F2F2F2;
+
+// cores do tema
+$cinza: #D7D5D4;
+$cinza-claro: #F8F9FA;
+
+$colors: (
+	/*
+	cor1: $cor1,
+	cor2: $cor2,
+	branco: #ffffff,
+	preto: #000,
+	cinza-claro: $cinza-claro,
+	*/
+);

@@ -1,0 +1,55 @@
+.input-autocomplete-form {
+	margin-bottom: 32px;
+	margin-top: 6.5px;
+
+	.input-autocomplete {
+		font-style: italic;
+		max-width: 100%;
+		width: 100%;
+		font-size: $font-size;
+		color: $cor-txt-claro;
+		font-weight: $regular;
+		line-height: $height_input;
+		background-color: #ffffff;
+		padding: 0px;
+		font-style: normal;
+		border-radius: 4px;
+		max-height: 200px;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		z-index: 99;
+		@include animacao;
+		@include box-sizing;
+
+		&.active {
+			border: 1px solid $cor-border;
+		}
+
+		&:empty {
+			border: none;
+		}
+
+		li {
+			padding: 0px 20px;
+			//border: 1px solid $cor-border;
+			//border-width: 0 1px;
+			@include animacao;
+			@include box-sizing;	
+
+			&:hover {
+				background-color: darken($bgclaro, 2.5%);
+			}
+
+			/*&:first-child {
+				border-top-width: 1px;
+				border-radius: 4px 4px 0 0;
+			}
+
+			&:last-child {
+				border-bottom-width: 1px;
+				border-radius: 0 0 4px 4px;
+			}*/		
+		}
+	}
+}

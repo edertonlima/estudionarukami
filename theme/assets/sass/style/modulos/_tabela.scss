@@ -1,0 +1,102 @@
+.table {
+	width: 100%;
+	background-color: #FFFFFF;
+	border: 1px solid $cor-border;
+	border-radius: 4px;
+	padding: 0 25px;
+    border-spacing: 0px;
+    border-collapse: separate;
+	@include box-sizing;
+
+	@include media(900){
+		background-color: transparent;
+		border: none;
+		padding: 0;
+	}
+
+	th, td {
+		text-align: left;
+		vertical-align: middle;
+		border: 1px solid $cor-border;
+		@include box-sizing;
+
+		&.col-preco, &.col-preco, &.col-qtd-prod, &.col-total {
+			min-width: 150px;
+		}
+
+		@include media(900){
+			vertical-align: bottom;
+		}
+	}
+
+	.thead, .tfoot {
+		th, td {
+			padding: 17px 10px;
+		}
+	}
+
+	.thead {
+		th {
+			font-size: 14px;
+			line-height: 15px;
+			color: $cor1;
+			font-weight: $regular;
+			border-width: 0 0 1px 0;
+		}
+	}
+
+	.tbody {
+		tr {
+			td {
+				padding: 21px 10px;
+				border-width: 0 0 1px 0;
+
+				&:first-child {
+					padding-left: 0;
+				}
+			}
+
+			&:last-child {
+				td {
+					border: none;
+				}
+			}
+
+			@include media(900){
+				background-color: #FFFFFF;
+				border-radius: 6px;
+				margin-bottom: 20px;
+				display: block;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				td {
+					padding: 10px;
+					border: none;
+				}
+			}
+		}
+	}
+
+	.tfoot {
+		td {
+			border-width: 1px 0 0 0;
+		}
+
+		@include media(900){
+			display: none;
+		}
+	}
+
+	tr {
+		.col-trash {
+			width: 20px;
+		}		
+		.col-produto {
+			width: 100%;
+		}
+		
+	}
+}

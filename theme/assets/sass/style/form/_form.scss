@@ -1,0 +1,159 @@
+form {
+	margin: 0 auto;
+	padding: 0px;
+	width: 100%;
+	border: none;
+	@include box-sizing;
+	@include clear();
+
+	textarea {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		height: 110px;
+		resize: vertical;
+	}
+
+	label {
+		font-family: $font-family;
+		font-weight: $bold;
+		color: $cor-txt;
+		font-size: 16px;
+		line-height: 32px;
+	}
+
+	.input-form:not(.input-checkbox-vacina) {
+		label {
+			position: relative;
+			width: 100%;
+			display: inline-block;
+			cursor: pointer;
+			padding-top: 6.5px;
+
+			span:not(.input-action) {
+				font-size: 16px;
+				font-family: $font-family;
+				color: $cor-txt;
+				line-height: 26px;
+				padding: 0 7px;
+				position: absolute;
+				transform: translate(13px,-50%);
+				background: #ffffff;
+				font-weight: $medium;
+			}
+		}
+	}
+
+	fieldset {
+		margin: 0px 0 15px;
+		width: 100%;
+		display: block;
+		position: relative;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.input-form, &.select-form {
+			margin-bottom: 32px;
+		}
+
+		&.error, &.success {
+			label {
+				&:after {
+					content: '';
+					width: 23px;
+					height: 23px;
+					position: absolute;
+					right: 17px;
+					top: 20px;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-color: #fff;
+				}
+			}
+		}
+
+		&.error {
+			input, textarea {
+				border-color: $error;
+			}
+			
+			label {
+				&:after {
+					background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.65687 16.9706C2.53267 13.8464 2.53267 8.78105 5.65687 5.65685C8.78106 2.53266 13.8464 2.53266 16.9706 5.65685C20.0948 8.78105 20.0948 13.8464 16.9706 16.9706C13.8464 20.0948 8.78106 20.0948 5.65687 16.9706ZM6.68539 15.942C9.24154 18.4982 13.3859 18.4982 15.9421 15.942C18.4982 13.3859 18.4982 9.24153 15.9421 6.68537C13.3859 4.12921 9.24154 4.12921 6.68539 6.68537C4.12923 9.24153 4.12923 13.3859 6.68539 15.942ZM12.3422 11.3137L14.3993 13.3707L13.3708 14.3993L11.3137 12.3422L9.25668 14.3993L8.22816 13.3707L10.2852 11.3137L8.22816 9.25667L9.25668 8.22815L11.3137 10.2852L13.3708 8.22815L14.3993 9.25667L12.3422 11.3137Z' fill='%23FA5357'/%3E%3C/svg%3E%0A");
+				}
+			}
+
+			.msg-input {
+				color: $error;
+			}
+		}
+
+		&.success {
+			input, textarea {
+				border-color: $success;
+			}
+			
+			label {
+				&:after {
+					background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16ZM8 14.5455C11.615 14.5455 14.5455 11.615 14.5455 8C14.5455 4.38505 11.615 1.45455 8 1.45455C4.38505 1.45455 1.45455 4.38505 1.45455 8C1.45455 11.615 4.38505 14.5455 8 14.5455ZM6.54545 9.1533L10.3948 5.30392L11.4234 6.33244L6.54545 11.2103L3.84938 8.51426L4.8779 7.48574L6.54545 9.1533Z' fill='%238EC044'/%3E%3C/svg%3E%0A");
+				}
+			}
+
+			.msg-input {
+				color: $success;
+			}
+		}
+
+		//&.clear {
+		//	@include clear;
+		//}
+	}
+
+	.legenda-input {
+		font-size: 12px;
+		margin-top: 3px;
+	}
+
+	.text-form-mensage {
+		font-size: 14px;
+		margin: 10px 0;
+		text-align: center;
+		
+		&.txt-form-erro{
+			color: $error;
+		}
+	}
+
+	&.newsletter {
+		padding-left: 25px;
+		input {
+			border-radius: 22px;
+			border-color: #ffffff;
+			color: #ffffff;
+
+			@include placeholder{
+				color: #ffffff;
+			}
+		}
+
+		button {
+			background-color: $cor4;
+			border-color: $cor4;
+			border-radius: 22px;
+			font-weight: $bold;
+
+			&:hover {
+				background-color: $cor3;
+				border-color: $cor3;
+			}
+		}
+
+		p {
+			color: #ffffff;
+			font-size: 14px;
+			line-height: 18px;
+			font-weight: $regular;
+		}
+	}
+}

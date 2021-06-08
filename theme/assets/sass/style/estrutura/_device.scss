@@ -1,0 +1,7 @@
+.show-900 {
+	display: none;
+
+	@include media(900) {
+		display: block;
+	}
+}
