@@ -13,7 +13,7 @@
 	<meta name="robots" content="index,follow" />
 	<meta name="author" content="" />
 	<meta name="language" content="pt-br" />
-	<meta name="title" content="" />
+	<meta name="title" content="Estúdio Narukami" />
 
 	<title>Estúdio Narukami</title>
 
